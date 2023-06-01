@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fake News Detection System</title>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+input[type=text], select, textarea {
+width: 50%;
+padding: 10px;
+border: 3px solid #ccc;
+border-radius: 1px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: horizontal;
+}
+button {
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 50%;
+}
+button:hover {
+opacity: 0.8;
+}
+h1 {
+text-align: center;
+}
+p {
+text-align: center;
+}
+div {
+text-align: center;
+}
+body {
+background: rgba(0, 128, 0, 0.3) /* Green
+background with 30% opacity */
+}
+</style>
+</head>
+<body>
+<p style="padding: 0 0em 0em 0">
+    <div>
+    <h1 style="text-align:center;">Final Year Project On Fake News Detection</h1>
+    <h2>By Sushil karki(20735) <br> Sujan Shrestha (20732) <br> Sauwan Thapa(20729)</h2>
+
+    <h2 style="color:red;">{{prediction_text}}</h2>
+        <form action="/prediction" method="POST" name="myform">
+            <textarea name="news" id="news"  rows="9" cols="50 " required="required" style="font-size:18pt"></textarea>
+            <br> </br>
+<!--            <button type="submit" class="btn btn-primary btn-block btn-large">Detect News</button><br>-->
+            <button id="button" style="background-color:Red">Detect News</button>
+        </form>
+    </div>
+</p>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+const textArea = document.getElementById("news");
+$('#button').click(function(){
+    $.ajax({
+        url: '/get_random_number',
+        success: function(data) {
+            var random_text = data.random_text;
+            console.log(random_text);
+            textArea.value = random_text;
+        }
+    });
+});
+</script>
+</body>
+</html>

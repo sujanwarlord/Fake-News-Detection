@@ -1,0 +1,48 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W292" />
+          <option value="E302" />
+          <option value="E203" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N803" />
+          <option value="N806" />
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="sklearn.metrics.accuracy_sco" />
+          <option value="datetime.datetime" />
+          <option value="dtime.datetime" />
+          <option value="Redstore.views" />
+          <option value="Redstore.Redstore.settings.settings" />
+          <option value="django.http.form" />
+          <option value="postf.views" />
+          <option value="airline.airline.views.flight" />
+          <option value="calculator.views" />
+          <option value="calculator.calculator.views" />
+          <option value="calculator.service.admin.*" />
+          <option value="wisdom.service.admin.*" />
+          <option value="wisdom.wisdom.urls.views" />
+          <option value="wisdom.views" />
+          <option value="wisdom.wisdom.views.*" />
+          <option value="MLDeployment.MLDeployment.settings.os" />
+          <option value="MLDeployment.Fake.views.result" />
+          <option value="Fake_News_Det.flask" />
+          <option value="Fake_News_Det.sklearn" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
